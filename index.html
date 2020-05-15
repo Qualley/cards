@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cards-site.css">
+    <title>Cards Framework</title>
+</head>
+<body class="">
+
+    <! --- Header --- />
+    <div class="header">
+        <div class="text-wrapper">
+            <p class="micro-header slide" data-delay=".1s">matt qualley / thesis 2020</p>
+            <h1 class="slide" data-delay="0s">Cards Framework</h1>
+        </div>
+        <img class="head-img" src="img/card-group.png" alt="">
+    </div>
+    
+    <! ----------------------- Grid ----------------------- />
+    <div class="grid">
+
+        <div class="toggle-dark">
+            <p>Toggle Dark Mode</p>
+            <div class="toggle-switch"></div>
+        </div>
+
+        <! ----------------------- Introduction ----------------------- />
+        <h1 class="title">Introduction</h1>
+        <p class="body-copy">A lightweight component library build for quickly developing cards in HTML and CSS. The aim for this projects is to generate cohesiveness and efficiency when developing card based components.</p>
+
+        <h1 class="title">Quick Start</h1>
+        <p class="body-copy">Make sure your development environment is up to date. Use an HTML5 doctype with a viewport meta tag for proper responsive behavior. If your using VS Code as a text editor this can be done automatically by pressing ! followed by tab
+        </p>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">!DOCTYPE</span><span class="attr"> html</span>&gt;<br>
+
+            &lt;<span class="html-tag">html</span><span class="attr"> lang</span>="<span class="attr-val">en</span>"&gt;<br>
+
+            &lt;<span class="html-tag">head</span></span>&gt;<br>
+
+                <span class="tab-1"></span>
+                &lt;<span class="html-tag">meta</span></span><span class="attr"> charset</span>="<span class="attr-val">UTF-8</span>"&gt;<br>
+
+                <span class="tab-1"></span>
+                &lt;<span class="html-tag">meta</span></span><span class="attr"> name</span>="<span
+                    class="attr-val">viewport</span>" <span class="attr"> content</span>="<span
+                        class="attr-val">width=device-width, initial-scale=1.0</span>"&gt;<br>
+                    
+                <span class="tab-1"></span>
+                &lt;<span class="html-tag">link</span></span><span class="attr"> rel</span>="<span
+                    class="attr-val">stylesheet</span><span class="attr"> href</span>="<span
+                        class="attr-val">cards.css</span>"&gt;<br>
+
+                &lt;/<span class="html-tag">head</span></span>&gt;<br>
+                &lt;<span class="html-tag">body</span></span>&gt;<br><br>
+                    <span class="tab-1"></span>
+                    <span class="comment">&lt;! -- place all cards inside of a div tag with a class name of grid -- &gt;</span><br>
+                    <span class="tab-1">
+                        &lt;<span class="html-tag">div</span><span class="attr"> class</span><span
+                            class="attr-val">="grid"</span>&gt;<br>
+                    </span>
+
+                     <span class="tab-2"></span>
+                     <span class="comment">&lt;! -- cards go here --
+                         &gt;</span><br>
+
+                    <span class="tab-1">
+                        &lt;/<span class="html-tag">div</span>&gt;<br><br>
+                    </span>
+
+                &lt;/<span class="html-tag">body</span></span>&gt;<br>
+                &lt;/<span class="html-tag">html</span></span>&gt;<br>
+
+        </p>
+
+        <p class="body-copy">download or clone the repository and link the style sheet in the head of your document.
+        </p>
+        <br>
+
+        <a class="big-btn" href="https://github.com/Qualley/cards" target="blank">Cards on github</a>
+
+        <h1 class="title">Overview</h1>
+        <p class="body-copy">Cards is built using a 12 column grid system and CSS grids. If you're not familiar with CSS grids don't worry too much because cards handle all of the responsive behavior for you. If you would like to override these widths simply give the targeted element a property of grid-column and a value of span followed by the number of columns you wish for the card to span. If you would like a better understanding of how grids work in CSS view the attached link.</p><br><br>
+        <p class="code-example">
+            .<span class="class-name">className</span> {<br>
+                <span class="property">grid-column</span>: <span class="value">span <span class="num">6</span></span>;<br>
+            }
+        </p>
+
+         <a class="big-btn" href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="blank">CSS Grids</a>
+
+        <! ----------------------- Hero Cards ----------------------- />
+        <h1 class="title">Hero Cards</h1>
+        <p class="body-copy">Hero cards are designed to be main focal points of your site or application. They will automatically span 100% of the parent container or 12 columns so there is no need to pass a span value in the class name. These cards are image driven with a limited amount of text. They are broken into 3 different cards. Ones that are aligned left, center, and right.</p>
+
+        <! --- hero-l --- />
+        <p class="card-name">hero-l </p>
+        <div class="card hero-l">
+            <div class="text-wrapper">
+                <p class="micro-header">micro header</p>
+                <h1>Header Large</h1>
+            </div>
+            <img src="img/1.jpg" alt="">
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span><span class="attr"> class</span><span class="attr-val">="card hero-l</span>&gt;<br>
+
+                <span class="tab-1"></span>
+                &lt;<span class="html-tag">div<span class="attr"> class</span><span class="attr-val">="text-wrapper"</span></span>&gt;<br>
+                    
+                        <span class="tab-2"></span>&lt;<span class="html-tag">p<span class="attr"> class</span><span
+                            class="attr-val">="micro-header"</span></span>&gt;micro header&lt;/<span class="html-tag">p</span>&gt;<br>
+
+                        <span class="tab-2"></span>&lt;<span class="html-tag">h1</span>&gt;Header Large&lt;/<span
+                            class="html-tag">h1</span>&gt;<br>
+
+                 <span class="tab-1"></span>
+                 &lt;/<span class="html-tag">div</span>&gt;<br>
+
+                 <span class="tab-1"></span>
+                 &lt;<span class="html-tag">img<span class="attr"> src</span><span
+                         class="attr-val">="img/path.jpg"</span></span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- hero-c --- />
+        <p class="card-name">hero-c</p>
+        <div class="card hero-c">
+            <div class="text-wrapper">
+                <p class="micro-header">micro header</p>
+                <h1>Header Large</h1>
+            </div>
+            <img src="img/2.jpg" alt="">
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span><span class="attr"> class</span><span class="attr-val">="card
+                hero-c</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div<span class="attr"> class</span><span
+                    class="attr-val">="text-wrapper"</span></span>&gt;<br>
+
+            <span class="tab-2"></span>&lt;<span class="html-tag">p<span class="attr"> class</span><span
+                    class="attr-val">="micro-header"</span></span>&gt;micro header&lt;/<span
+                class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>&lt;<span class="html-tag">h1</span>&gt;Header Large&lt;/<span
+                class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img<span class="attr"> src</span><span
+                    class="attr-val">="img/path.jpg"</span></span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- hero-r --- />
+        <p class="card-name">hero-r</p>
+        <div class="card hero-r">
+            <div class="text-wrapper">
+                <p class="micro-header">micro header</p>
+                <h1>Header Large</h1>
+            </div>
+            <img src="img/3.jpg" alt="">
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span><span class="attr"> class</span><span class="attr-val">="card
+                hero-r</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div<span class="attr"> class</span><span
+                    class="attr-val">="text-wrapper"</span></span>&gt;<br>
+
+            <span class="tab-2"></span>&lt;<span class="html-tag">p<span class="attr"> class</span><span
+                    class="attr-val">="micro-header"</span></span>&gt;micro header&lt;/<span
+                class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>&lt;<span class="html-tag">h1</span>&gt;Header Large&lt;/<span
+                class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img<span class="attr"> src</span><span
+                    class="attr-val">="img/path.jpg"</span></span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! ----------------------- Article Cards ----------------------- />
+        <h1 class="title">Article Cards</h1>
+        <p class="body-copy">Article cards are designed to be an entryway for a larger portion of writing. Whether that be blog posts or news articles these cards could be used to display a small summary of a body of writing, a title of the article or blog post, and a supporting image to compliment the content. Some varieties of these cards were not designed to have a summary but rather a category or tagline above the title. If a card doesn’t span the full width of the container by default you should pass in a class name with a span value followed by the number of columns.</p>
+        <! --- atricle-1 --- />
+        <p class="card-name">article-1</p>
+        <div class=" card article-1">
+            <img src="img/4.jpg" alt="">
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <div class="body-wrapper">
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-1</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="tagline"</span>
+            &gt;tagline &lt;/
+            <span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>
+            &gt;Article Title&lt;/
+            <span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="body-wrapper"</span>&gt;<br>
+
+            <span class="tab-3"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ...
+                &lt;/
+            <span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>&gt<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+    
+        <! --- atricle-2 --- />
+        <p class="card-name">article-2</p>
+        <div class=" card article-2">
+            <img src="img/5.jpg" alt="">
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <div class="body-wrapper">
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-2</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="tagline"</span>
+            &gt;tagline &lt;/
+            <span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>
+            &gt;Article Title&lt;/
+            <span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="body-wrapper"</span>&gt;<br>
+
+            <span class="tab-3"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ...
+            &lt;/
+            <span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>&gt<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- atricle-3 --- />
+        <p class="card-name">article-3</p>
+        <div class=" card article-3">
+            <img src="img/6.jpg" alt="">
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <div class="body-wrapper">
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-3</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="tagline"</span>
+            &gt;tagline &lt;/
+            <span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>
+            &gt;Article Title&lt;/
+            <span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="body-wrapper"</span>&gt;<br>
+
+            <span class="tab-3"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ...
+            &lt;/
+            <span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>&gt<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- atricle-4 --- />
+        <p class="card-name">article-4</p>
+        <div class=" card article-4">
+            <img src="img/7.jpg" alt="">
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <div class="body-wrapper">
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-4</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="tagline"</span>&gt;tagline &lt;/
+            <span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>&gt;Article Title&lt;/
+            <span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="body-wrapper"</span>&gt;<br>
+
+            <span class="tab-3"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ...
+            &lt;/
+            <span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>&gt<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- atricle-5 --- />
+        <p class="card-name">article-5</p>
+        <div class=" card article-5 span-4"data-delay="0s">
+            <img src="img/20.jpg" alt="">
+            <div class="fade"></div>
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+            </div>
+            <a class="btn" href="#">View Article</a>
+        </div>
+
+        <div class=" card article-5 span-8"data-delay=".15s">
+            <img src="img/8.jpg" alt="">
+            <div class="fade"></div>
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+            </div>
+            <a class="btn" href="#">View Article</a>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-5 span-4</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="fade"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="tagline"</span>&gt;Tagline&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>&gt;Title of article&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="btn"</span>
+            &gt<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+       
+        </p>
+
+        <! --- atricle-6 --- />
+        <p class="card-name">article-6</p>
+        <div class=" card article-6 span-8"data-delay="0s">
+            <img src="img/11.jpg" alt="">
+            <div class="fade"></div>
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+            </div>
+            <a href="#">View Article</a>
+        </div>
+
+        <div class=" card article-6 span-4"data-delay=".15s">
+            <img src="img/10.jpg" alt="">
+            <div class="fade"></div>
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+            </div>
+            <a href="#">View Article</a>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-6 span-4</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="fade"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="tagline"</span>&gt;Tagline&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>&gt;Title of article&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="btn"</span>
+            &gt<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- atricle-7 --- />
+        <p class="card-name">article-7</p>
+        <div class=" card article-7 span-6" data-delay="0s">
+            <img src="img/12.jpg" alt="">
+            <p class="catagory">catagory</p>
+            <div class="fade"></div>
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+            </div>
+            <a href="#">View Article</a>
+        </div>
+
+        <div class=" card article-7 span-6" data-delay=".15s">
+            <img src="img/21.jpg" alt="">
+            <p class="catagory">catagory</p>
+            <div class="fade"></div>
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+            </div>
+            <a href="#">View Article</a>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-7 span-6</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">p</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="catagory"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="fade"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="tagline"</span>&gt;Tagline&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>&gt;Title of article&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="btn"</span>
+            &gt<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- atricle-8 --- />
+        <p class="card-name">article-8</p>
+        <div class=" card article-8 span-6" data-delay="0s">
+            <img src="img/13.jpg" alt="">
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <div class="body-wrapper">
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <div class=" card article-8 span-6" data-delay=".15s">
+            <img src="img/22.jpg" alt="">
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <div class="body-wrapper">
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore.</p>
+                </div>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-4 span-6</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="tagline"</span>&gt;Tagline&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>&gt;Title of article&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="body-wrapper"</span>&gt; <br>
+
+            <span class="tab-3"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod ...&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="btn"</span>
+            &gt<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- atricle-9 --- />
+        <p class="card-name">article-9</p>
+        <div class="card article-9 span-6" data-delay="0s">
+            <img src="img/14.jpg" alt="">
+            <p class="catagory">catagory</p>
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <div class="card article-9 span-6" data-delay=".15s">
+            <img src="img/23.jpg" alt="">
+            <p class="catagory">catagory</p>
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-9 span-6</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">p</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="catagory"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="tagline"</span>&gt;Tagline&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>&gt;Title of article&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="btn"</span>
+            &gt<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- atricle-10 --- />
+        <p class="card-name">article-10</p>
+        <div class="card article-10 span-4" data-delay="0s">
+            <img src="img/17.jpg" alt="">
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <div class="card article-10 span-4" data-delay=".15s">
+            <img src="img/24.jpg" alt="">
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <div class="card article-10 span-4" data-delay=".3s">
+            <img src="img/25.jpg" alt="">
+            <div class="text-wrapper">
+                <p class="tagline">tagline</p>
+                <h1 class="card-title">Title of article goes here</h1>
+                <a href="#">View Article</a>
+            </div>
+        </div>
+
+        <p class="code-example move-down">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card article-10 span-4</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="tagline"</span>&gt;Tagline&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="card-title"</span>&gt;Title of article&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">a</span><span class="attr"> href</span>
+            <span class="attr-val">="link/path"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="btn"</span>
+            &gt<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! ----------------------- Product Cards ----------------------- />
+        <h1 class="title">Product Cards</h1>
+        <p class="body-copy">Product cards were designed for sites or applications that are selling any sort of e-commerce merchandise. There are purchase links in the various cards that are listed as links and buttons. The buttons come with a hover effect build in that translates the y-axis 5px up. These cards as well should be passed a span value in their class name to determine how many columns they cover in the grid.</p>
+
+        <! --- product-1 --- />
+        <p class="card-name">product-1</p>
+        <div class="card product-1 span-4" data-delay="0s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$28</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <a href="#">Add to cart</a>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                <title>stars</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                        <g id="stars" transform="translate(62.000000, 7584.000000)">
+                            <path
+                                d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                id="Shape" fill="#BBC0D5"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <img src="img/26.jpg" alt="" class="product">
+        </div>
+
+        <div class="card product-1 span-4" data-delay=".15s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$28</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore.</p>
+                <a href="#">Add to cart</a>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                <title>stars</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                        <g id="stars" transform="translate(62.000000, 7584.000000)">
+                            <path
+                                d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                id="Shape" fill="#BBC0D5"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <img src="img/16.jpg" alt="" class="product">
+        </div>
+
+        <div class="card product-1 span-4" data-delay=".3s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$28</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore.</p>
+                <a href="#">Add to cart</a>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                <title>stars</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                        <g id="stars" transform="translate(62.000000, 7584.000000)">
+                            <path
+                                d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                id="Shape" fill="#BBC0D5"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <img src="img/27.jpg" alt="" class="product">
+        </div>
+
+
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card product-1 span-4</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="product-name"</span>&gt;Product Name&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="price"</span>&gt;$28&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod ...&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">a </span>
+            <span class="attr">href</span>
+            <span class="attr-val">="link/path"</span>&gt;Add to cart&lt;/<span class="html-tag">a</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            <span class="comment">&lt;! -- insert your svg code here --
+                &gt;</span><br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="product"</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- Product-2 --- />
+        <p class="card-name">product-2</p>
+        <div class="card product-2 span-4" data-delay="0s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$72</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                        <title>stars</title>
+                        <desc>Created with Sketch.</desc>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                                <g id="stars" transform="translate(62.000000, 7584.000000)">
+                                    <path
+                                        d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                        id="Shape" fill="#4383FF"></path>
+                                    <path
+                                        d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                        id="Shape" fill="#4383FF"></path>
+                                    <path
+                                        d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                        id="Shape" fill="#4383FF"></path>
+                                    <path
+                                        d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                        id="Shape" fill="#4383FF"></path>
+                                    <path
+                                        d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                        id="Shape" fill="#BBC0D5"></path>
+                                </g>
+                            </g>
+                        </g>
+            </svg>
+            <img src="img/28.jpg" alt="" class="product">
+            <a href="#" class="btn">Add to cart</a>
+        </div>
+
+        <div class="card product-2 span-4" data-delay=".15s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$72</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore.</p>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                <title>stars</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                        <g id="stars" transform="translate(62.000000, 7584.000000)">
+                            <path
+                                d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                id="Shape" fill="#BBC0D5"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <img src="img/18.jpg" alt="" class="product">
+            <a href="#" class="btn">Add to cart</a>
+        </div>
+
+        <div class="card product-2 span-4" data-delay=".3s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$72</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                        <title>stars</title>
+                        <desc>Created with Sketch.</desc>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                                <g id="stars" transform="translate(62.000000, 7584.000000)">
+                                    <path
+                                        d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                        id="Shape" fill="#4383FF"></path>
+                                    <path
+                                        d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                        id="Shape" fill="#4383FF"></path>
+                                    <path
+                                        d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                        id="Shape" fill="#4383FF"></path>
+                                    <path
+                                        d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                        id="Shape" fill="#4383FF"></path>
+                                    <path
+                                        d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                        id="Shape" fill="#BBC0D5"></path>
+                                </g>
+                            </g>
+                        </g>
+            </svg>
+            <img src="img/29.jpg" alt="" class="product">
+            <a href="#" class="btn">Add to cart</a>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card product-2 span-4</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="product-name"</span>&gt;Product Name&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="price"</span>&gt;$72&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod ...&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            <span class="comment">&lt;! -- insert your svg code here --
+                &gt;</span><br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="product"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">a </span>
+            <span class="attr">href</span>
+            <span class="attr-val">="link/path"</span>
+            <span class="attr">class</span>
+            <span class="attr-val">="btn"</span>&gt;Add to cart&lt;/<span class="html-tag">a</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- Product-3 --- />
+        <p class="card-name">product-3</p>
+        <div class="card product-3 span-4" data-delay="0s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$72</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                <title>stars</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                        <g id="stars" transform="translate(62.000000, 7584.000000)">
+                            <path
+                                d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                id="Shape" fill="#BBC0D5"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <img src="img/19.jpg" alt="" class="product">
+            <a href="#">Add to cart</a>
+        </div>
+
+        <div class="card product-3 span-4" data-delay=".15s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$72</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore.</p>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                <title>stars</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                        <g id="stars" transform="translate(62.000000, 7584.000000)">
+                            <path
+                                d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                id="Shape" fill="#BBC0D5"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <img src="img/30.jpg" alt="" class="product">
+            <a href="#">Add to cart</a>
+        </div>
+
+        <div class="card product-3 span-4" data-delay=".3s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$72</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore.</p>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                <title>stars</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                        <g id="stars" transform="translate(62.000000, 7584.000000)">
+                            <path
+                                d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                id="Shape" fill="#4383FF"></path>
+                            <path
+                                d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                id="Shape" fill="#BBC0D5"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <img src="img/31.jpg" alt="" class="product">
+            <a href="#">Add to cart</a>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card product-3 span-4</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="product-name"</span>&gt;Product Name&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="price"</span>&gt;$72&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod ...&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            <span class="comment">&lt;! -- insert your svg code here --
+                &gt;</span><br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="product"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">a </span>
+            <span class="attr">href</span>
+            <span class="attr-val">="link/path"</span>&gt;Add to cart&lt;/<span class="html-tag">a</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+        
+        <! --- product-4 --- />
+        <p class="card-name">product-4</p>
+        <div class="card product-4 span-4" data-delay="0s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$28</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                                <title>stars</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                                        <g id="stars" transform="translate(62.000000, 7584.000000)">
+                                            <path
+                                                d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                                id="Shape" fill="#4383FF"></path>
+                                            <path
+                                                d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                                id="Shape" fill="#4383FF"></path>
+                                            <path
+                                                d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                                id="Shape" fill="#4383FF"></path>
+                                            <path
+                                                d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                                id="Shape" fill="#4383FF"></path>
+                                            <path
+                                                d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                                id="Shape" fill="#BBC0D5"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                </svg>
+                <a href="#">Add to cart</a>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <img src="img/32.jpg" alt="" class="product">
+        </div>
+
+        <div class="card product-4 span-4" data-delay=".15s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$28</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore.</p>
+                <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                    <title>stars</title>
+                    <desc>Created with Sketch.</desc>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                            <g id="stars" transform="translate(62.000000, 7584.000000)">
+                                <path
+                                    d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                    id="Shape" fill="#4383FF"></path>
+                                <path
+                                    d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                    id="Shape" fill="#4383FF"></path>
+                                <path
+                                    d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                    id="Shape" fill="#4383FF"></path>
+                                <path
+                                    d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                    id="Shape" fill="#4383FF"></path>
+                                <path
+                                    d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                    id="Shape" fill="#BBC0D5"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <a href="#">Add to cart</a>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <img src="img/20.jpg" alt="" class="product">
+        </div>
+
+        <div class="card product-4 span-4" data-delay=".3s">
+            <div class="text-wrapper">
+                <h1 class="product-name">Product Name</h1>
+                <p class="price">$28</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore.</p>
+                <svg width="200px" height="13px" viewBox="0 0 98 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+                    <title>stars</title>
+                    <desc>Created with Sketch.</desc>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Cards-Pro-1-Copy" transform="translate(-62.000000, -7584.000000)" fill-rule="nonzero">
+                            <g id="stars" transform="translate(62.000000, 7584.000000)">
+                                <path
+                                    d="M10.9137627,13 C10.7103929,13 10.4970447,12.9219621 10.2637397,12.7598835 L7.541056,10.89621 C7.26926278,10.7110432 6.73090316,10.7105815 6.4610106,10.8957482 L3.73547588,12.760807 C3.25318548,13.0918907 2.79227741,13.0600291 2.5537456,12.7455689 C2.39314053,12.5340816 2.37080787,12.2427095 2.48722279,11.8797641 L3.47081011,8.78687884 C3.57297015,8.46595389 3.41236507,7.98987674 3.13582023,7.78854829 L0.468730551,5.84637516 C-0.0539487009,5.46542109 -0.0297153901,5.10339928 0.0315806313,4.92007957 C0.0928766527,4.73768337 0.292920257,4.43014954 0.945318997,4.42091429 L4.27811197,4.37427628 C4.62450577,4.36873513 5.04122368,4.07459241 5.15478763,3.75551451 L6.22865591,0.69125848 C6.44010343,0.0895819273 6.8021776,0 6.99984539,0 C7.19656285,0 7.55958735,0.0895819273 7.77008454,0.690796718 L8.84775413,3.75551451 C8.95894226,4.07413064 9.37566017,4.36873513 9.72205397,4.37427628 L13.0529463,4.42091429 C13.7062954,4.4306113 13.9068141,4.73722161 13.9681101,4.91915604 C14.0294062,5.10109047 14.055065,5.46311228 13.5338112,5.84545164 L10.8629202,7.78854829 C10.5873257,7.99033851 10.427671,8.46595389 10.5303062,8.78641708 L11.512468,11.8811494 C11.6284077,12.2440948 11.6051248,12.5354669 11.4445197,12.7464924 C11.320027,12.9071857 11.1271108,13 10.9137627,13 Z"
+                                    id="Shape" fill="#4383FF"></path>
+                                <path
+                                    d="M31.9137627,13 C31.7103929,13 31.4970447,12.9219621 31.2637397,12.7598835 L28.541056,10.89621 C28.2692628,10.7110432 27.7309032,10.7105815 27.4610106,10.8957482 L24.7354759,12.760807 C24.2531855,13.0918907 23.7922774,13.0600291 23.5537456,12.7455689 C23.3931405,12.5340816 23.3708079,12.2427095 23.4872228,11.8797641 L24.4708101,8.78687884 C24.5729701,8.46595389 24.4123651,7.98987674 24.1358202,7.78854829 L21.4687306,5.84637516 C20.9460513,5.46542109 20.9702846,5.10339928 21.0315806,4.92007957 C21.0928767,4.73768337 21.2929203,4.43014954 21.945319,4.42091429 L25.278112,4.37427628 C25.6245058,4.36873513 26.0412237,4.07459241 26.1547876,3.75551451 L27.2286559,0.69125848 C27.4401034,0.0895819273 27.8021776,0 27.9998454,0 C28.1965629,0 28.5595874,0.0895819273 28.7700845,0.690796718 L29.8477541,3.75551451 C29.9589423,4.07413064 30.3756602,4.36873513 30.722054,4.37427628 L34.0529463,4.42091429 C34.7062954,4.4306113 34.9068141,4.73722161 34.9681101,4.91915604 C35.0294062,5.10109047 35.055065,5.46311228 34.5338112,5.84545164 L31.8629202,7.78854829 C31.5873257,7.99033851 31.427671,8.46595389 31.5303062,8.78641708 L32.512468,11.8811494 C32.6284077,12.2440948 32.6051248,12.5354669 32.4445197,12.7464924 C32.320027,12.9071857 32.1271108,13 31.9137627,13 Z"
+                                    id="Shape" fill="#4383FF"></path>
+                                <path
+                                    d="M52.9137627,13 C52.7103929,13 52.4970447,12.9219621 52.2637397,12.7598835 L49.541056,10.89621 C49.2692628,10.7110432 48.7309032,10.7105815 48.4610106,10.8957482 L45.7354759,12.760807 C45.2531855,13.0918907 44.7922774,13.0600291 44.5537456,12.7455689 C44.3931405,12.5340816 44.3708079,12.2427095 44.4872228,11.8797641 L45.4708101,8.78687884 C45.5729701,8.46595389 45.4123651,7.98987674 45.1358202,7.78854829 L42.4687306,5.84637516 C41.9460513,5.46542109 41.9702846,5.10339928 42.0315806,4.92007957 C42.0928767,4.73768337 42.2929203,4.43014954 42.945319,4.42091429 L46.278112,4.37427628 C46.6245058,4.36873513 47.0412237,4.07459241 47.1547876,3.75551451 L48.2286559,0.69125848 C48.4401034,0.0895819273 48.8021776,0 48.9998454,0 C49.1965629,0 49.5595874,0.0895819273 49.7700845,0.690796718 L50.8477541,3.75551451 C50.9589423,4.07413064 51.3756602,4.36873513 51.722054,4.37427628 L55.0529463,4.42091429 C55.7062954,4.4306113 55.9068141,4.73722161 55.9681101,4.91915604 C56.0294062,5.10109047 56.055065,5.46311228 55.5338112,5.84545164 L52.8629202,7.78854829 C52.5873257,7.99033851 52.427671,8.46595389 52.5303062,8.78641708 L53.512468,11.8811494 C53.6284077,12.2440948 53.6051248,12.5354669 53.4445197,12.7464924 C53.320027,12.9071857 53.1271108,13 52.9137627,13 Z"
+                                    id="Shape" fill="#4383FF"></path>
+                                <path
+                                    d="M73.9137627,13 C73.7103929,13 73.4970447,12.9219621 73.2637397,12.7598835 L70.541056,10.89621 C70.2692628,10.7110432 69.7309032,10.7105815 69.4610106,10.8957482 L66.7354759,12.760807 C66.2531855,13.0918907 65.7922774,13.0600291 65.5537456,12.7455689 C65.3931405,12.5340816 65.3708079,12.2427095 65.4872228,11.8797641 L66.4708101,8.78687884 C66.5729701,8.46595389 66.4123651,7.98987674 66.1358202,7.78854829 L63.4687306,5.84637516 C62.9460513,5.46542109 62.9702846,5.10339928 63.0315806,4.92007957 C63.0928767,4.73768337 63.2929203,4.43014954 63.945319,4.42091429 L67.278112,4.37427628 C67.6245058,4.36873513 68.0412237,4.07459241 68.1547876,3.75551451 L69.2286559,0.69125848 C69.4401034,0.0895819273 69.8021776,0 69.9998454,0 C70.1965629,0 70.5595874,0.0895819273 70.7700845,0.690796718 L71.8477541,3.75551451 C71.9589423,4.07413064 72.3756602,4.36873513 72.722054,4.37427628 L76.0529463,4.42091429 C76.7062954,4.4306113 76.9068141,4.73722161 76.9681101,4.91915604 C77.0294062,5.10109047 77.055065,5.46311228 76.5338112,5.84545164 L73.8629202,7.78854829 C73.5873257,7.99033851 73.427671,8.46595389 73.5303062,8.78641708 L74.512468,11.8811494 C74.6284077,12.2440948 74.6051248,12.5354669 74.4445197,12.7464924 C74.320027,12.9071857 74.1271108,13 73.9137627,13 Z"
+                                    id="Shape" fill="#4383FF"></path>
+                                <path
+                                    d="M94.9137627,13 C94.7103929,13 94.4970447,12.9219621 94.2637397,12.7598835 L91.541056,10.89621 C91.2692628,10.7110432 90.7309032,10.7105815 90.4610106,10.8957482 L87.7354759,12.760807 C87.2531855,13.0918907 86.7922774,13.0600291 86.5537456,12.7455689 C86.3931405,12.5340816 86.3708079,12.2427095 86.4872228,11.8797641 L87.4708101,8.78687884 C87.5729701,8.46595389 87.4123651,7.98987674 87.1358202,7.78854829 L84.4687306,5.84637516 C83.9460513,5.46542109 83.9702846,5.10339928 84.0315806,4.92007957 C84.0928767,4.73768337 84.2929203,4.43014954 84.945319,4.42091429 L88.278112,4.37427628 C88.6245058,4.36873513 89.0412237,4.07459241 89.1547876,3.75551451 L90.2286559,0.69125848 C90.4401034,0.0895819273 90.8021776,0 90.9998454,0 C91.1965629,0 91.5595874,0.0895819273 91.7700845,0.690796718 L92.8477541,3.75551451 C92.9589423,4.07413064 93.3756602,4.36873513 93.722054,4.37427628 L97.0529463,4.42091429 C97.7062954,4.4306113 97.9068141,4.73722161 97.9681101,4.91915604 C98.0294062,5.10109047 98.055065,5.46311228 97.5338112,5.84545164 L94.8629202,7.78854829 C94.5873257,7.99033851 94.427671,8.46595389 94.5303062,8.78641708 L95.512468,11.8811494 C95.6284077,12.2440948 95.6051248,12.5354669 95.4445197,12.7464924 C95.320027,12.9071857 95.1271108,13 94.9137627,13 Z"
+                                    id="Shape" fill="#BBC0D5"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <a href="#">Add to cart</a>
+            </div>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <img src="img/33.jpg" alt="" class="product">
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card product-4 span-4</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper"</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">h1 </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="product-name"</span>&gt;Product Name&lt;/<span class="html-tag">h1</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="price"</span>&gt;$72&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod ...&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            <span class="comment">&lt;! -- insert your svg code here --
+                &gt;</span><br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">a </span>
+            <span class="attr">href</span>
+            <span class="attr-val">="link/path"</span>&gt;Add to cart&lt;/<span class="html-tag">a</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="product"</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! ----------------------- User Cards ----------------------- />
+        <h1 class="title">User Cards</h1>
+        <p class="body-copy">User cards were designed to be very minimal cards. The information they contain is a users photo with a name and some sort of supporting text. That could be a user handle of some sort or potentially a job title. One of the cards has room for a bio.</p>
+        
+        <! --- user-1 --- />
+        <p class="card-name">user-1</p>
+        <div class="card user-1 span-2" data-delay="0s">
+            <img src="img/person-1.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+            <a href="#">Following</a>
+        </div>
+
+        <div class="card user-1 span-2" data-delay=".15s">
+            <img src="img/person-6.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+            <a href="#">Following</a>
+        </div>
+
+        <div class="card user-1 span-2" data-delay=".3s">
+            <img src="img/person-7.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+            <a href="#">Following</a>
+        </div>
+
+        <div class="card user-1 span-2" data-delay=".45s">
+            <img src="img/person-11.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+            <a href="#">Following</a>
+        </div>
+
+        <div class="card user-1 span-2" data-delay=".6s">
+            <img src="img/person-9.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+            <a href="#">Following</a>
+        </div>
+
+        <div class="card user-1 span-2" data-delay=".75s">
+            <img src="img/person-10.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+            <a href="#">Following</a>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card user-1 span-2</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="user"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="name"</span>&gt;User Name&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="small"</span>&gt;@johndoedesign&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">a </span>
+            <span class="attr">href</span>
+            <span class="attr-val">="link/path"</span>&gt;Following&lt;/<span class="html-tag">a</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- user-2 --- />
+        <p class="card-name">user-2</p>
+        <div class="card user-2 span-2" data-delay="0s">
+            <img src="img/person-2.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">Product Designer</p>
+        </div>
+
+        <div class="card user-2 span-2" data-delay=".15s">
+            <img src="img/person-8.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">Product Designer</p>
+        </div>
+
+        <div class="card user-2 span-2" data-delay=".3s">
+            <img src="img/person-13.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">Product Designer</p>
+        </div>
+
+        <div class="card user-2 span-2" data-delay=".45s">
+            <img src="img/person-14.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">Product Designer</p>
+        </div>
+
+        <div class="card user-2 span-2" data-delay=".6s">
+            <img src="img/person-15.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">Product Designer</p>
+        </div>
+
+        <div class="card user-2 span-2" data-delay=".75s">
+            <img src="img/person-16.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">Product Designer</p>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card user-2 span-2</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="user"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="name"</span>&gt;User Name&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="small"</span>&gt;@johndoedesign&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- user-3 --- />
+        <p class="card-name">user-3</p>
+        <div class="card user-3 span-3" data-delay="0s">
+            <img src="img/person-17.jpg" alt="" class="user">
+            <div class="text-wrapper">
+                <p class="name">User Name</p>
+                <p class="small">@johndoedesign</p>
+            </div>
+        </div>
+
+        <div class="card user-3 span-3" data-delay=".15s">
+            <img src="img/person-18.jpg" alt="" class="user">
+            <div class="text-wrapper">
+                <p class="name">User Name</p>
+                <p class="small">@johndoedesign</p>
+            </div>
+        </div>
+
+        <div class="card user-3 span-3" data-delay=".3s">
+            <img src="img/person-19.jpg" alt="" class="user">
+            <div class="text-wrapper">
+                <p class="name">User Name</p>
+                <p class="small">@johndoedesign</p>
+            </div>
+        </div>
+
+        <div class="card user-3 span-3" data-delay=".45s">
+            <img src="img/person-20.jpg" alt="" class="user">
+            <div class="text-wrapper">
+                <p class="name">User Name</p>
+                <p class="small">@johndoedesign</p>
+            </div>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card user-3 span-3</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="user"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="name"</span>&gt;User Name&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="small"</span>&gt;@johndoedesign&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+    
+        <! --- user-4 --- />
+        <p class="card-name">user-4</p>
+        <div class="card user-4 span-2" data-delay=".0s">
+            <img src="img/person-4.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+        </div>
+
+        <div class="card user-4 span-2" data-delay=".15s">
+            <img src="img/person-21.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+        </div>
+
+        <div class="card user-4 span-2" data-delay=".3s">
+            <img src="img/person-22.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+        </div>
+
+        <div class="card user-4 span-2" data-delay=".45s">
+            <img src="img/person-23.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+        </div>
+
+        <div class="card user-4 span-2" data-delay=".6s">
+            <img src="img/person-24.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+        </div>
+
+        <div class="card user-4 span-2" data-delay=".75s">
+            <img src="img/person-25.jpg" alt="" class="user">
+            <p class="name">User Name</p>
+            <p class="small">@johndoedesign</p>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card user-4 span-2</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="user"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="name"</span>&gt;User Name&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="small"</span>&gt;@johndoedesign&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+        <! --- user-5 --- />
+        <p class="card-name">user-5</p>
+        <div class="card user-5 span-4" data-delay="0s">
+            <img src="img/person-5.jpg" alt="" class="user">
+            <div class="text-wrapper">
+                <p class="name">User Name</p>
+                <p class="small">@johndoedesign</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+        </div>
+
+        <div class="card user-5 span-4" data-delay=".15s">
+            <img src="img/person-26.jpg" alt="" class="user">
+            <div class="text-wrapper">
+                <p class="name">User Name</p>
+                <p class="small">@johndoedesign</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore.</p>
+            </div>
+        </div>
+
+        <div class="card user-5 span-4" data-delay=".3s" >
+            <img src="img/person-27.jpg" alt="" class="user">
+            <div class="text-wrapper">
+                <p class="name">User Name</p>
+                <p class="small">@johndoedesign</p>
+                <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore.</p>
+            </div>
+        </div>
+
+        <p class="code-example">
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="card user-5 span-4</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">img</span>
+            <span class="attr"> src</span>
+            <span class="attr-val">="img/path.jpg"</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="user"</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;<span class="html-tag">div</span>
+            <span class="attr"> class</span>
+            <span class="attr-val">="text-wrapper</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="name"</span>&gt;User Name&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="small"</span>&gt;@johndoedesign&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-2"></span>
+            &lt;<span class="html-tag">p </span>
+            <span class="attr">class</span>
+            <span class="attr-val">="copy"</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod ...&lt;/<span class="html-tag">p</span>&gt;<br>
+
+            <span class="tab-1"></span>
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+            &lt;/<span class="html-tag">div</span>&gt;<br>
+
+        </p>
+
+    </div>
+    <! ----------------------- Grid End ----------------------- />
+    
+    <script src="index.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
